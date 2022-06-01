@@ -1,0 +1,20 @@
+package com.f.myzhxy.service;
+
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.f.myzhxy.entity.Grade;
+import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
+
+/**
+* @author F
+* @description 针对表【tb_grade】的数据库操作Service
+* @createDate 2022-05-13 17:08:29
+*/
+public interface GradeService extends IService<Grade> {
+
+    IPage<Grade> getGradeByOpr(Page<Grade> page, String gradeName);
+
+    List<Grade> getGrades();
+}
